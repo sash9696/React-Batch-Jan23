@@ -4,6 +4,8 @@ import pokemon from './pokemon.json'
 import PropTypes from 'prop-types'
 
 
+
+
 const PokemonType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.shape({
@@ -25,13 +27,15 @@ const PokemonType = PropTypes.shape({
 
 })
 
-const PokemonRow = ({ pokemon }) => {
+const PokemonRow = ({ pokemon, getSelectedPokemon }) => {
+
+
   return (
 
     <tr>
       <td>{pokemon.name.english}</td>
       <td>{pokemon.type.join(", ")}</td>
-      <td><button>More Information</button></td>
+      <td><button onClick={() => getSelectedPokemon(pokemon)} >More Information</button></td>
     </tr>
 
 
@@ -42,6 +46,14 @@ PokemonRow.propTypes = {
   pokemon: PokemonType
 }
 
+const PokemonInfo = (props) => {
+  console.log('props', props)
+  return (
+    <div>
+      <h1>Pokemon Info</h1>
+    </div>
+  )
+}
 
 
 
@@ -51,6 +63,8 @@ function App() {
   //it should be on top level management
   //it should be inside react function
   const [filter, setFilter] = useState('')
+  const [selectedPokemon, setSelectedPokemon] = useState(null)
+  console.log('selectedPokemon', selectedPokemon)
 
   console.log(filter)
 
@@ -89,7 +103,12 @@ function App() {
             <tbody>
 
               {pokemon.filter((pokemon) => pokemon.name.english.toLowerCase().includes(filter.toLowerCase())).slice(0, 20).map((pokemon) => (
-                <PokemonRow key={pokemon.id} pokemon={pokemon} />
+                <PokemonRow
+                  key={pokemon.id}
+                  pokemon={pokemon}
+                  getSelectedPokemon={(pokemon) => { setSelectedPokemon(pokemon) }}
+
+                />
               )
               )}
               {/* {pokemon.filter(({ name: { english } }) => english.includes(filter)).slice(0, 20).map((pokemon) => (
@@ -100,7 +119,7 @@ function App() {
           </table>
         </div>
 
-
+        <PokemonInfo {...selectedPokemon} />
       </div>
 
     </div>
