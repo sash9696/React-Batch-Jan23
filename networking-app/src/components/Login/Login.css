@@ -1,0 +1,138 @@
+.login_container {
+    background-color: #2775B1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.login_container_left {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 80px;
+}
+
+.login_container_left_text {
+    padding: 0 10%;
+}
+
+.login_container_right {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form_container {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.form_container>img {
+    width: 200px;
+    height: 100px;
+    /* object-fit: contain; */
+}
+
+.form_container>form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.form_container>form>input {
+    width: 355px;
+    height: 50px;
+    margin-bottom: 8px;
+    outline: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.form_container>form>button {
+    width: 365px;
+    height: 50px;
+    font-size: large;
+    color: white;
+    background-color: #2775B1;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.guest_option {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2775B1;
+    cursor: pointer;
+}
+
+.form_container>p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.form_container>p>span {
+    color: #2775B1;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width:900px) {
+    .login_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .login_container_left {
+        flex: 0.1;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .form_container>form>input {
+        width: 70vw;
+
+    }
+
+    .form_container>form>button {
+        width: 72vw;
+
+    }
+}
+
+@media (max-width:400px) {
+
+    .login_container_left {
+        flex: 0.1;
+        font-size: 12px;
+    }
+
+    .form_container>form>input {
+        width: 60vw;
+
+    }
+
+    .form_container>form>button {
+        width: 62vw;
+
+    }
+}
