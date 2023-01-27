@@ -1,0 +1,16 @@
+.about_us {
+    margin-top: 40px;
+}
+
+.about_us_title {
+    font-weight: 500;
+    font-size: 28px;
+    margin: 60px 0;
+}
+
+.about_us_para1 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 40px 0;
+}
