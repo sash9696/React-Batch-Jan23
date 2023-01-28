@@ -1,0 +1,36 @@
+.posts_container {
+    border: 1px solid lightgray;
+    margin: 20px;
+    background-color: white;
+    padding-top: 5px;
+    padding-left: 20px;
+    color: grey;
+    border-radius: 10px;
+}
+
+.posts_header {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.posts_header>p {
+    margin-right: 20px;
+}
+
+.posts_name {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.posts_des {
+    font-size: 0.8rem;
+}
+
+.posts_body {
+    color: black;
+    font-weight: 400;
+    padding-right: 1px;
+    overflow-wrap: anywhere;
+}
