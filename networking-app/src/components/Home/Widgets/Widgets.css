@@ -1,0 +1,52 @@
+.widget_container {
+    flex: 0.2;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    margin: 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.widgets_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.widgets_header>h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.widgets {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    margin: 5px 10px;
+}
+
+.widgets:hover {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.widgets_left {
+    padding: 0 10px;
+    color: gray;
+
+}
+
+.widgets_right {
+    padding-top: 10px;
+
+}
+
+.widgets_right>p {
+    font-size: 0.9rem;
+}

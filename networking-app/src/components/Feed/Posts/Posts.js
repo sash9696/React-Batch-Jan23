@@ -4,23 +4,23 @@ import InputItems from '../InputItems/InputItems'
 import './Posts.css'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
-function Posts() {
+function Posts({ id, userId, name, tags, message, likeCount }) {
     return (
         <div className='posts_container'>
             <div className='posts_header'>
                 <p>
                     <Avatar>
-                        S
+                        {name ? name[0] : 'J'}
                     </Avatar>
                 </p>
                 <div className='posts_info'>
-                    <p className='posts_name'>john</p>
-                    <p className='posts_des'>john@gmail.com</p>
+                    <p className='posts_name'>{name ? name : 'John'}</p>
+                    <p className='posts_des'>abc@gmail.com</p>
 
                 </div>
             </div>
             <div className='posts_body'>
-                <p>this is a message </p>
+                <p>{message}</p>
             </div>
             <div className='posts_options'>
                 <InputItems

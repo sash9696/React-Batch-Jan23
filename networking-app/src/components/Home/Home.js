@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import Sidebar from './Sidebar/Sidebar'
 import Feed from '../Feed/Feed'
+import Widgets from './Widgets/Widgets'
 
 function Home() {
     return (
@@ -9,7 +10,7 @@ function Home() {
 
             <Sidebar />
             <Feed />
-            {/* <Widgets/> */}
+            <Widgets />
         </div>
     )
 }
