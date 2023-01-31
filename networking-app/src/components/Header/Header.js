@@ -2,9 +2,12 @@ import React from 'react'
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import Button from '@mui/material/Button';
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 function Header() {
+
+    const { logout } = useAuth0()
     return (
         <div className='header_container'>
             <div className='header_left'>
@@ -31,7 +34,13 @@ function Header() {
                 <Button style={{ border: 'none' }} variant='outlined'>
                     DARK MODE
                 </Button>
-                <Button style={{ backgroundColor: '#2775B1', color: 'white' }} variant='outlined'>
+                <Button
+                    style={{ backgroundColor: '#2775B1', color: 'white' }}
+                    variant='outlined'
+                    onClick={() => logout({
+                        returnTo: window.location.origin
+                    })}
+                >
                     LOGOUT
                 </Button>
             </div>

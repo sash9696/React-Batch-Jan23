@@ -34,3 +34,15 @@
     padding-right: 1px;
     overflow-wrap: anywhere;
 }
+
+.icons {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icons>p {
+    margin-left: 5px;
+    color: black;
+}

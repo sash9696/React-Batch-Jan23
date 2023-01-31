@@ -8,7 +8,7 @@ import Posts from './Posts/Posts';
 function Feed() {
     const [posts, setPosts] = useState([])
     const [input, setInput] = useState('')
-    // console.log(posts)
+    console.log(posts)
 
     //get the data from an api
 
