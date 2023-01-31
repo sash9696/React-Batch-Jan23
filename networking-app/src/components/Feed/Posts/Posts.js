@@ -5,7 +5,7 @@ import './Posts.css'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 
-function Posts({ id, userId, name, tags, message, likeCount }) {
+function Posts({ id, userId, name, tags, message, likeCount, user, email }) {
 
     const [isLiked, setIsLiked] = useState(false)
 
@@ -27,7 +27,7 @@ function Posts({ id, userId, name, tags, message, likeCount }) {
                 </p>
                 <div className='posts_info'>
                     <p className='posts_name'>{name ? name : 'John'}</p>
-                    <p className='posts_des'>abc@gmail.com</p>
+                    <p className='posts_des'>{email ? email : 'john@gmail.com'}</p>
 
                 </div>
             </div>
@@ -45,7 +45,7 @@ function Posts({ id, userId, name, tags, message, likeCount }) {
                     onClick={handleLikeClick}
                 >
                     {isLiked ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
-                    <p>{isLiked ? likeCount + 1 : likeCount}</p>
+                    <p>{isLiked ? likeCount + 1 : (likeCount === 0 ? "" : likeCount)}</p>
                 </div>
             </div>
         </div>

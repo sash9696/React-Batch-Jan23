@@ -100,3 +100,15 @@
 .sidebar_hash {
     margin: 0 10px;
 }
+
+@media (max-width: 1100px) {
+    .sidebar {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    .sidebar {
+        display: none;
+    }
+}

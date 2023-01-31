@@ -47,3 +47,9 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 1100px) {
+    .feed_container {
+        flex: 0.9;
+    }
+}

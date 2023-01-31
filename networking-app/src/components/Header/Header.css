@@ -68,17 +68,19 @@
     }
 }
 
-@media (max-width:820px) {
+@media (max-width:990px) {
 
     .header_container {
         flex-direction: column;
         flex-wrap: wrap;
+        width: 80%;
     }
 
     .header_right {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        width: 100%;
+        justify-content: space-around;
     }
 
     .header_left {

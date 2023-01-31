@@ -4,11 +4,13 @@ import CreateIcon from '@mui/icons-material/Create';
 import PhotoIcon from '@mui/icons-material/Photo';
 import InputItems from './InputItems/InputItems';
 import Posts from './Posts/Posts';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function Feed() {
     const [posts, setPosts] = useState([])
     const [input, setInput] = useState('')
-    console.log(posts)
+    const { user } = useAuth0()
+    // console.log(posts)
 
     //get the data from an api
 
@@ -30,11 +32,13 @@ function Feed() {
         const copyArray = [...posts]
 
         copyArray.unshift({
-            id: 11,
+            id: user?.given_name,
             body: input,
             tags: ['HTML', "CSS"],
-            name: 'Peter',
+            name: user?.given_name,
             userId: 10,
+            email: user?.email,
+            reactions: 0
         })
         setPosts(copyArray)
 
@@ -76,6 +80,7 @@ function Feed() {
                     name={value.name}
                     userId={value.userId}
                     likeCount={value.reactions}
+                    email={value.email}
                 />
             ))}
 

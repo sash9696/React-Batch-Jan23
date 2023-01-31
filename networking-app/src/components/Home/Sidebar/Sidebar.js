@@ -1,7 +1,10 @@
+import { useAuth0 } from '@auth0/auth0-react'
 import React from 'react'
 import './Sidebar.css'
 
 function Sidebar() {
+
+    const { user } = useAuth0()
 
     function recentItem(topic, link) {
         return (
@@ -17,8 +20,8 @@ function Sidebar() {
         <div className='sidebar'>
             <div className='sidebar_top'>
                 <img src='https://images.unsplash.com/photo-1554034483-04fda0d3507b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGVza3RvcCUyMHBsYWluJTIwd2FsbHBhcGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' alt='' />
-                <h2>Alpha User</h2>
-                <h4>abc@gmail.com</h4>
+                <h2>{user?.given_name}</h2>
+                <h4>{user?.email}</h4>
             </div>
             <div className='sidebar_stats'>
                 <div className='sidebar_stat'>
