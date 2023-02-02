@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.section {
+  display: grid;
+  place-items: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
