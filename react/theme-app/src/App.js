@@ -6,7 +6,8 @@ function App() {
 
   const { toggle, toggleFunction } = useContext(ThemeContext)
 
-  console.log(toggle)
+
+
 
 
   return (

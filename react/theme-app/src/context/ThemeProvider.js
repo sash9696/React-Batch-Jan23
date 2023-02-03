@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 //React Context Api setup
 
@@ -12,8 +12,14 @@ function ThemeProvider({ children }) {
 
     const [toggle, setToggle] = useState(false)
 
+    useEffect(() => {
+        const isToggle = localStorage.getItem('toggle') == 'true'
+        setToggle(isToggle)
+    }, [])
+
     const toggleFunction = () => {
         setToggle(!toggle)
+        localStorage.setItem('toggle', !toggle)
     }
 
     // console.log(children)
