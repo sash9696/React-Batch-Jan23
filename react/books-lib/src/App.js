@@ -4,6 +4,7 @@ import { url } from './resource'
 import axios from 'axios'
 import Nav from './components/Nav/Nav'
 import List from './components/List/List'
+import AddBooks from './components/AddBooks/AddBooks'
 
 //axios vs fetch
 //crud
@@ -41,6 +42,7 @@ function App() {
       <Nav />
       <div className='app_body'>
         <List getBooks={getBooks} books={books} />
+        <AddBooks getBooks={getBooks} />
       </div>
     </div>
   )

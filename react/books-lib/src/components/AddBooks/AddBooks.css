@@ -1,0 +1,25 @@
+.addBooks {
+    flex: 0.3;
+    margin-top: 20px;
+    padding-right: 30px;
+}
+
+.addBooks>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.addBooks>form>input {
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.addBooks_button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.addBooks_button:hover {
+    background-color: red;
+}

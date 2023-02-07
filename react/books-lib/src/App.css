@@ -5,3 +5,7 @@
 .app {
   background-color: whitesmoke;
 }
+
+.app_body {
+  display: flex;
+}
