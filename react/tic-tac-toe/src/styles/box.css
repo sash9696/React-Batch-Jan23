@@ -1,0 +1,9 @@
+.board-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid black;
+    width: calc(250px/3);
+    height: calc(250px/3);
+}
