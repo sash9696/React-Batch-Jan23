@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import paginate from "../utilis/utility"
 
 export function useFetch(url) {
     const [loading, setLoading] = useState(true)
@@ -7,7 +8,7 @@ export function useFetch(url) {
     async function getData() {
         const resp = await fetch(url)
         const data = await resp.json()
-        setData(data)
+        setData(paginate(data))
         setLoading(false)
     }
     useEffect(() => {

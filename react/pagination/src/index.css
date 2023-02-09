@@ -174,3 +174,37 @@ Pagination
   transition: var(--transition);
   cursor: pointer;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--clr-primary-7);
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: var(--radius);
+  margin: 0.5rem;
+  transition: var(--transition);
+}
+
+.active-btn {
+  background: var(--clr-primary-1);
+  color: var(--clr-white);
+}
+
+.prev-btn,
+.next-btn {
+  background: transparent;
+  border-color: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
